@@ -124,8 +124,8 @@ BOOL isDifferentKeyboardShown=NO;
     NSNumber* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     double dValue = [value doubleValue];
 
-    if(dValue <= 0.0){
-        // [self removeDecimalButton];
+    if(dValue < 0.0){
+        [self removeDecimalButton];
         return;
     }
 
